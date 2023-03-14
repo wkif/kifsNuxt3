@@ -14,7 +14,10 @@
       <div>目录结构</div>
     </template>
     <template #body-content>
-      <div>我应该显示一点内容</div>
+      <div>
+        我应该显示一点内容
+        <n-button type="error">naive-ui</n-button>
+      </div>
     </template>
   </NuxtLayout>
 </template>
@@ -26,7 +29,17 @@ export default {
 </script>
 <script lang="ts" setup>
 import { useUserStore } from "@/stores";
+import { NButton } from "naive-ui";
 const route = useRoute();
 console.log("useUserStore", useUserStore);
-// console.log("route", route.name);
+
+// const { data: list } = await useAsyncData("list", () =>
+//   $fetch("http://jsonplaceholder.typicode.com/posts")
+// );
+const { data: list } = await useFetch(
+  "http://jsonplaceholder.typicode.com/posts"
+);
+console.log("list", list.value);
+const a = ifLogin();
+console.log(a, "a");
 </script>

@@ -31,7 +31,7 @@
   flex-flow: row;
 }
 .left-sider {
-  width: 400px;
+  width: 100px;
   height: calc(100vh - 100px);
   background: yellow;
   overflow: auto;
@@ -39,7 +39,7 @@
 .body-content {
   flex: 1;
   height: calc(100vh - 100px);
-  background-color: blue;
+  /* background-color: blue; */
   overflow: auto;
 }
 .sider-content {
